@@ -47,7 +47,7 @@ label{
     height: 35px;
     border-radius: 15px;
 }
-#select-mode{
+.select-mode{
     display: flex;
     align-items: center;
     justify-content: center;
