@@ -73,6 +73,35 @@
             font-size: 14px;
         }
 
+        .hero{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            margin: 0 auto;
+            height: calc(100vh - 80px);
+        }
+
+        .hero-first{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-visual{
+            
+        }
+
+        .heart{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            fill: none;
+            stroke: red;
+            stroke-width: 0.3px;
+        }
+
+    
+
 
     </style>
 </head>
@@ -93,9 +122,24 @@
 
     <main>
         <div class="hero">
+            <div class="hero-first">
 
+            </div>
+
+            <div class="hero-visual">
+                <svg class="heart" viewBox="0 0 32 32">
+                    <path d="M16 28 C16 28 4 19 4 11 A 6 6 0 0 1 14 7 C 15 8 16 10 16 10 C 16 10 17 8 18 7 A 6 6 0 0 1 28 11 C 28 19 16 28 16 28 Z" />
+                </svg>
+            </div>
         </div>
 
+        <div class="calculators">
+
+        </div>
+        
+        <div class="about">
+            
+        </div>
         
     </main>
 </body>
