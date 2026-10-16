@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="bmi.css">
 </head>
 <body>
+
+    <div class="container">
+        <div id="metric">
+            
+            <div id="select-mode">
+                <button class="metric active">Metric</button>
+
+                <button class="other">Other</button>
+
+            </div>
+
+            <h2>Enter your requested details below:</h2>
+            
+            <form> <br>
+                <label>Height (cm)</label> <br>
+                <input type="number"> <br> <br>
+
+                <label>Weight (kg)</label> <br>
+                <input type="number"> <br> <br>
+                
+                <label>Age (years)</label><br>
+                <input type="number"> <br> <br>
+
+                <label>Gender</label>
+                <div class="radios"> <br>
+
+                <input type="radio" value="male" class="radio" name="gender">
+                <label>Male</label> <br>
+
+                <input type="radio" value="female" class="radio" name="gender">
+                <label>female</label> <br>
+
+                <input type="radio" value="nottosay" class="radio" name="gender">
+                <label>Rather not say</label>
+
+                </div>
+
+                <button class="btn submit-btn" type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+            <div id="output-box hide">
+
+            </div>
+
+        </div>
+
+        <div class="lbone"></div>
+    </div>
     
     <script src="bmi.js"></script>
 </body>
