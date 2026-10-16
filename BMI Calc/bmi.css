@@ -6,14 +6,17 @@
 body{
     background-color: black;
     color: white;
+}
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
 #metric{
-    margin-top: 30vh;
-    width: 50vw;
-    height: 50vh;
+    /* margin-top: 30vh; */
+    width: 55vw;
+    height: 67vh;
     background-color: rgb(42, 41, 41);
     padding: 50px;
     border-radius: 10px;
@@ -60,4 +63,17 @@ label{
 }
 .active{
     border: 1px solid black;
+}
+#output-box{
+    flex-direction: column;
+    gap: 10px;
+    background-color: gray;
+    text-align: center;
+    margin-top: 5%;
+    border: none;
+    border-radius: 10px;
+}
+#output-box p{
+    font-weight: 750;
+    font-size: 21px;
 }

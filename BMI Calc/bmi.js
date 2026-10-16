@@ -10,19 +10,30 @@ form.addEventListener('submit', (e)=>{
 
     const bmi = weight / (height * height);
     let finalbmi = bmi;
-    console.log(bmi);
-    if(age<=19){
-        console.log("You are a kid")
-    }
+    const output = document.querySelector('#output-box');
+    output.classList.remove('hide');
+    output.style.display = "flex";
 
     if(finalbmi<18.5){
-        console.log("You are underweight!");
+        output.innerHTML = `
+            <h2> Underweight </h2>
+            <p> Your BMI is ${finalbmi} </p>
+        `;
     }else if(finalbmi<=24.9 && finalbmi >= 18.5){
-        console.log("You are normal!");
+        output.innerHTML = `
+            <h2> Normal </h2>
+            <p> Your BMI is ${finalbmi} </p>
+        `;
     }else if(finalbmi<30 && finalbmi >= 25){
-        console.log("You are obese");
+        output.innerHTML =`
+            <h2> Obese </h2>
+            <p> Your BMI is ${finalbmi} </p>
+        `;
     }else if(finalbmi >= 30){
-        console.log("You have obesity");
+        output.innerHTML = `
+            <h2> Obesity </h2>
+            <p> Your BMI is ${finalbmi} </p>
+        `;
     }else{
         console.log("Please enter your details properly again!");
     }
