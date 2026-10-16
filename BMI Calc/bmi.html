@@ -18,17 +18,17 @@
 
             </div>
 
-            <h2>Enter your requested details below:</h2>
+            <h2>Enter your asked details below:</h2>
             
             <form> <br>
-                <label>Height (cm)</label> <br>
-                <input type="number"> <br> <br>
+                <label>Height (m)</label> <br>
+                <input type="number" id="height" step="0.01" min="0"> <br> <br>
 
                 <label>Weight (kg)</label> <br>
-                <input type="number"> <br> <br>
+                <input type="number" id="weight" step="0.01" min="0"> <br> <br>
                 
                 <label>Age (years)</label><br>
-                <input type="number"> <br> <br>
+                <input type="number" id="age" min="0" step="1"><br> <br>
 
                 <label>Gender</label>
                 <div class="radios"> <br>
@@ -37,7 +37,7 @@
                 <label>Male</label> <br>
 
                 <input type="radio" value="female" class="radio" name="gender">
-                <label>female</label> <br>
+                <label>Female</label> <br>
 
                 <input type="radio" value="nottosay" class="radio" name="gender">
                 <label>Rather not say</label>
