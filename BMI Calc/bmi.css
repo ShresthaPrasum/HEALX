@@ -13,7 +13,7 @@ body{
     justify-content: center;
     min-height: 100vh;
 }
-#metric{
+#metric, .other{
     /* margin-top: 30vh; */
     width: 55vw;
     height: 67vh;
@@ -38,9 +38,6 @@ label{
     font-weight: normal;
 }
 
-.hide{
-    display: none;
-}
 .submit-btn{
     margin-top: 10px;
     width: 110px;
@@ -64,7 +61,7 @@ label{
 .active{
     border: 1px solid black;
 }
-#output-box{
+.output-box, .output-boxx{
     flex-direction: column;
     gap: 10px;
     background-color: gray;
@@ -73,7 +70,14 @@ label{
     border: none;
     border-radius: 10px;
 }
-#output-box p{
+#output-box p, .output-boxx p{
     font-weight: 750;
     font-size: 21px;
+}
+
+.hide{
+    display: none;
+}
+#metric{
+    display: none;
 }
