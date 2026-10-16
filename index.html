@@ -165,6 +165,38 @@
             color: rgba(9, 9, 9, 0.663);
         }
 
+        .layout-main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .calc-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+            width: 90%;
+        }
+
+        .calc-card{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            border-radius: 12px;
+            min-height: 170px;
+            gap: 10px;
+            border: 1px solid rgba(0, 0, 0);
+            background-color: rgba(197, 226, 198, 0.8);
+        }
+
+        .calc-card h3{
+            font-size: 2.4vw;
+        }
+
     </style>
 </head>
 <body>
@@ -209,6 +241,44 @@
 
                 <div class="layout-description">
                     <p>Explore our health calculators to calculate health life expectancy and solve them according to your needs.</p>
+                </div>
+            </div>
+
+            <div class="layout-main">
+                <div class="calc-grid">
+                    <div class="calc-card">
+                        <h3>BMI Calculator</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Blood Sugar Converter</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Chlorestol ratios calculator</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Chlorestol  units calc</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Sleep calculator</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Body Shape Calculator</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Ideal weight Calculator</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+                    <div class="calc-card">
+                        <h3>Face Shape Calculator</h3>
+                        <p>Calculate your Body Mass Index to assess your weight status.</p>
+                    </div>
+    
                 </div>
             </div>
         </div>
