@@ -3,3 +3,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+    color: white;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#Calculator{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 65vh;
+    background-color: rgb(26, 25, 25);
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 56px;
+    font-weight: 800;
+}
+h2{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 750;
+}
+input[type="number"]{
+    margin-top: 5px;
+}
+label{
+    font-weight: normal;
+}
+.radios label{
+    gap: 5px;
+    font-weight: normal;
+}
+.submit-btn{
+    width: 110px;
+    height: 35px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+#output-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: gray;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1px solid black;
+    margin-top: 7%;
+}
+#output-box p{
+    font-weight: 700;
+    font-size: 20px;
+}
+.hide{
+    display: none;
+}
