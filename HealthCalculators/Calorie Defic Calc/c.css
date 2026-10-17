@@ -35,11 +35,11 @@ h2{
     font-size: 48px;
     font-weight: 750;
 }
-input[type="number"]{
+input[type="number"], input[type="text"]{
     margin-top: 5px;
 }
 label{
-    font-weight: normal;
+    font-weight: 650;
 }
 .radios label{
     gap: 5px;
