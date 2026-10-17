@@ -57,8 +57,8 @@ label{
     gap: 10px;
     background-color: gray;
     text-align: center;
-    border: 1px solid black;
-    border-radius: 1px solid black;
+    border: 1px solid rgb(26, 25, 25);
+    border-radius: 15px;
     margin-top: 7%;
 }
 #output-box p{

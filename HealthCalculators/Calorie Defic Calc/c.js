@@ -1,8 +1,7 @@
 const form = document.querySelector("#form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const height = document.querySelector(".height").value;
-  const age = document.querySelector(".age").value;
+  const name = document.querySelector(".name").value;
   const date = document.querySelector(".date").value;
 
   const target_date = new Date(date + "T00:00:00Z");
@@ -21,9 +20,10 @@ form.addEventListener("submit", (e) => {
 
   const remaining_days =
     Math.floor((target_utc - current_utc) / (1000 * 60 * 60 * 24)) + 7;
+    console.log(remaining_days);
 
-  const formm = new FormData(form);
-  const gender = formm.get("gender");
+//   const formm = new FormData(form);
+//   const gender = formm.get("gender");
 
   const weight = parseFloat(document.querySelector(".weight").value);
   const target_weight = parseFloat(
@@ -35,9 +35,9 @@ form.addEventListener("submit", (e) => {
 
   document.querySelector("#output-box").innerHTML = `
     <p>
-        <span> You have to deficit 
+        <span> ${name}, You have to deficit 
          <span>${Math.round(caloriedeficit).toLocaleString()}</span>
-         <span class="unit">kcal/day. GOOD LUCK IN IT!</span>
+         <span class="unit">kcal/day. Good Luck and also you have to maintain your consistency!</span>
     </p>
     `;
 });
