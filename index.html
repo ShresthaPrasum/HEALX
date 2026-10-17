@@ -190,7 +190,7 @@
 
         .calc-grid{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 50px;
             width: 90%;
         }
@@ -234,7 +234,7 @@
 
         .calc1-grid{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 50px;
             width: 90%;
         }
@@ -246,7 +246,7 @@
             overflow: hidden;
             border-radius: 12px;
             min-height: 230px;
-            gap: 16px;
+            gap: 12px;
             background-color: rgba(197, 226, 198, 0.8);
             transition: all 0.3s ease-in-out;
         }
@@ -265,10 +265,13 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            overflow: auto;
         }
 
         .calc1-options span{
             background-color: rgb(86, 136, 86);
+            white-space: nowrap;
+            font-size: 1vw;
             color: white;
             padding: 8px 14px;
             border-radius: 12px;
@@ -310,7 +313,7 @@
             </div>
         </div>
 
-        <div class="calculators">
+        <div class="calculators" id="calculators">
             <div class="layout-header">
                 <div class="layout-head">
                     <h1>Health Calculators</h1>
@@ -360,7 +363,7 @@
             </div>
         </div>
 
-        <div class="howitworks">
+        <div class="howitworks" id="howitworks">
             <div class="layout-header">
                 <div class="layout-head">
                     <h1>How it works</h1>
@@ -408,13 +411,25 @@
                     <div class="calc1-card">
                         <h3>Take Action</h3>
                         <p>View your health issues and get health tips from us or consult a healthcare professional.</p>
+                        <div class="calc1-options">
+                            <span>Workout</span>
+                            <span>Less sugar</span>
+                            <span>Junk Food</span>
+                            <span>Eat more</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="about">
-            
+        <div class="about" id="about">
+            <div class="about-container">
+                <h1>About the APP</h1>
+                <p>
+
+                </p>
+                <a href="#calculators"></a>
+            </div>
         </div>
         
     </main>
