@@ -7,6 +7,70 @@
     <link rel="stylesheet" href="m.css">
 </head>
 <body>
+
+    <div id="container">
+
+        <h1>Maintain your weight!</h1>
+
+        <div id="maintain">
+
+            <h2>Enter the asked details!</h2>
+
+            <form id="form">
+
+                <label>Name</label> <br>
+                <input type="text" id="name"> <br> <br>
+
+                <label>Height (cm)</label> <br>
+                <input type="number" class="height" step="0.1"> <br> <br>
+
+                <label>Weight (kg)</label> <br>
+                <input type="number" class="weight" step="0.1"> <br> <br>
+
+                <label for="age">Age (years)</label>
+                <input type="number" class="age"> <br> <br>
+
+                <label>Gender</label> <br>
+
+                <div class="radios">
+
+                    <input type="radio" name="gender" value="male" class="male">
+                    <label>Male</label> <br>
+
+                    <input type="radio" name="gender" value="female" class="female">
+                    <label>Female</label>
+
+                </div>
+
+                <label>
+                    Physical Activity Level
+                </label>
+
+                <div class="radios">
+
+                    <input type="radio" name="lvl" value="no">
+                    <label>I do not exercise</label>
+
+                    <input type="radio" name="lvl" value="regularly">
+                    <label>I do exercise regularly.</label>
+
+                    <input type="radio" name="lvl" value="job">
+                    <label>I have a physical job!</label>
+
+                    <input type="radio" name="lvl" value="professional">
+                    <label>I am a professional athlete.</label>
+
+                </div>
+
+                <button class="btn submit-btn">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
     
     <script src="m.js"></script>
 </body>
