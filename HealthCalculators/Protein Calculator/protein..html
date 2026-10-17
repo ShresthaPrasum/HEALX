@@ -10,6 +10,66 @@
 
     <div id="container">
 
+        <h1>Protein Calculator</h1>
+
+        <div id="protein">
+            <h2>Enter the requested details listed below:</h2>
+
+            <form id="form">
+
+                <label>Height (cm):</label>
+                <input type="number" class="Height" step="0.1">
+
+                <label>Weight (kg)</label>
+                <input type="number" class="weight" step="0.1">
+
+                <label>Age (years)</label>
+                <input type="number" class="age">
+
+                <label>Gender</label>
+
+                <div class="radios">
+
+                    <input type="radio" name="gender" value="male" class="male">
+                    <label>Male</label>
+
+                    <input type="radio" name="gender" value="female" class="female">
+                    <label>Female</label>">
+
+                </div>
+
+                <label>Activity</label>
+
+                <div class="radios">
+
+                    <input type="radio" name="activity" value="no-workout">
+                    <label>No workout</label>
+
+                    <input type="radio" name="activity" value="1-2-times">
+                    <label>1-2 times a week</label>
+
+                    <input type="radio" name="activity" value="2-3-times">
+                    <label>2-3 times a week</label>
+
+                    <input type="radio" name="activity" value="3-5-times">
+                    <label>3-5 times a week</label>
+
+                    <input type="radio" name="activity" value="6-7-times">
+                    <label>6-7 times a week</label>
+
+                    <input type="radio" name="activity" value="professional">
+                    <label>Professional Athlete</label>
+                    
+                </div>
+
+            </form>
+
+            <div id="output-box">
+
+            </div>
+
+        </div>
+
     </div>
     
     <script src="protein.js"></script>
