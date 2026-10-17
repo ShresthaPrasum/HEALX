@@ -36,6 +36,10 @@
             width: 100%;
             height: 80px;
         }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
 
         .nav-bar{
             display: flex;
@@ -199,6 +203,8 @@
             gap: 10px;
             border: 1px solid rgba(0, 0, 0);
             background-color: rgba(197, 226, 198, 0.8);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
         }
 
         .calc-card h3{
@@ -207,6 +213,11 @@
 
         .calc-card p{
             color: rgb(98, 98, 98);
+        }
+        
+        .calc-card:hover{
+            transform: scale(1.1);
+            
         }
 
     </style>
@@ -258,38 +269,38 @@
 
             <div class="layout-main">
                 <div class="calc-grid">
-                    <div class="calc-card">
+                    <a href="/HealthCalculators/BMI Calc/bmi.html" class="calc-card">
                         <h3>BMI Calculator</h3>
                         <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
-                        <h3>Calorie Deficit Calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
+                    </a>
+                    <a href="#" class="calc-card">
+                        <h3>Calorie Deficit Calc</h3>
+                        <p>Calculate your Calorie target to achieve your weight goals.</p>
+                    </a>
+                    <a href="#" class="calc-card">
                         <h3>Protein Calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
+                        <p>Calculate your daily protein needs based on your body weight</p>
+                    </a>
+                    <a href="#" class="calc-card">
                         <h3>Daily Calorie Calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
-                        <h3>Sleep calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
+                        <p>Calculate your daily calorie needs based on your activity level.</p>
+                    </a>
+                    <a href="#" class="calc-card">
+                        <h3>Sleep Calculator</h3>
+                        <p>Calculate your Bedtime and Wake-up Time.</p>
+                    </a>
+                    <a href="#" class="calc-card">
                         <h3>Body Shape Calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
+                        <p>Calculate your Body Shape and determine the best clothing styles for you.</p>
+                    </a>
+                    <a href="#" class="calc-card">
                         <h3>Ideal weight Calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
-                    <div class="calc-card">
+                        <p>Calculate your Ideal weight based on your height and age.</p>
+                    </a>
+                    <a href="#" class="calc-card">
                         <h3>Face Shape Calculator</h3>
-                        <p>Calculate your Body Mass Index to assess your weight status.</p>
-                    </div>
+                        <p>Calculate your Face Shape and find the best hairstyle for you.</p>
+                    </a>
     
                 </div>
             </div>
