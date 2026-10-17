@@ -48,7 +48,7 @@
             align-items: center;
             width: 85%;
             height: 100%;
-            position: relative;
+            position: relative; 
             border-bottom: var(--border);
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;    
@@ -110,11 +110,11 @@
 
         @keyframes fadeIn {
             from{
-                top: 20px;
+                transform: translateY(20px);
                 opacity: 0;
             }
             to{
-                top: 0px;
+                transform: translateY(0);
                 opacity: 1;
             }
         }
@@ -265,8 +265,11 @@
             gap: 8px;
             /* border: 1px solid rgba(0, 0, 0); */
             background-color: rgba(197, 226, 198, 0.8);
+            opacity: 0;
             transition: all 0.3s ease-in-out;
             cursor: pointer;
+
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
 
         .calc-card h3{
@@ -405,8 +408,8 @@
                 <h1>Measure your health and improve it</h1>
                 <p>Choose the right tools to monitor your health and solve the health issues before it's too late.</p>
                 <div class="hero-btn">
-                    <a href="#button">Explore all calculators</a>
-                    <a href="#">About Us</a>
+                    <a href="#calculators">Explore all calculators</a>
+                    <a href="#about">About Us</a>
                 </div>
             </div>
 
@@ -563,6 +566,12 @@
     <script>
 
         let heartcontainer = document.querySelectorAll('.mutu')
+
+        let calcs = document.querySelectorAll('.calc-card');
+
+        calcs.forEach((calc,index)=>{
+            calc.style.animationDelay = `${(index + 2 )* 0.1}s`;
+        })
 
         console.log(heartcontainer)
         heartcontainer.forEach((heart, index) => {
