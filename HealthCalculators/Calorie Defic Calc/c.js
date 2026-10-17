@@ -22,6 +22,32 @@ form.addEventListener('submit', (e) => {
 
     const tdee = bmr * pal;
     const energy_balance = energy_intake - tdee;
+    let energyintake;
 
+    if(energy_balance > 0){
+        energyintake= `
+            <h2> Energy Intake exceeds expenditure </h2>
+        `;
+    }else if(energy_balance < 0){
+        energyintake = `
+            <h2> Energy Intake is below expenditure </h2>
+        `;
+    }else if(energy_balance == 0){
+        energyintake = `
+            <h2> Energy Intake matches expenditure </h2>
+        `;
+    }else{
+        alert("BRUHHHH");
+        console.log(energy_balance);
+    }
+
+    document.querySelector('#output-box').innerHTML = `
     
+        ${energyintake}
+
+        <p> 
+          Your Energy balance is ${energy_balance}! 
+        </p>
+
+    `;
 })
