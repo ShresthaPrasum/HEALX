@@ -1,7 +1,7 @@
 const form = document.querySelector('#metric-form');
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    const height = document.querySelector('.height').value;
+    const height = document.querySelector('.height').value / 100;
     const weight = document.querySelector('.weight').value;
     const formdata = new FormData(form);
     let gender = formdata.get('gender');

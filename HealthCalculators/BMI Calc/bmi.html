@@ -1,101 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="bmi.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pixelify+Sans:wght@400..700&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #F7F9FF;
+            font-family: "Unbounded", sans-serif; 
+            /* color: b; */
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        #metric, .other{
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            min-width: 50%;
+            min-height: 70vh;
+            background-color: #d0a548;
+            padding: 50px;
+            border-radius: 10px;
+            flex-direction: column;
+        }
+
+        h2{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        .height, .weight, .heightt, .weightt{
+            text-indent: 10px;
+            color: rgb(33, 36, 39);
+            min-height: 36px;
+            opacity: 1;
+            text-align: left;
+            width: 100%;
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: 500;
+            border-radius: 6px;
+            border-width: 1px;
+            border-style: solid;
+            outline: none;
+            transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .radio{
+            margin-top: 5px;
+        }
+
+        .radio input{
+            transform: scale(1.5);
+            cursor: pointer;
+
+            margin-left: 4px;
+        }
+
+
+
+        button{
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .select-mode{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 15px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .active{
+            transform: scale(1.1);
+            border: 2px solid rgb(1, 149, 255);
+        }
+
+        .output-box, .output-boxx{
+            flex-direction: column;
+            gap: 10px;
+            background-color: gray;
+            text-align: center;
+            margin-top: 5%;
+            border: none;
+            border-radius: 10px;
+        }
+        #output-box p, .output-boxx p{
+            font-weight: 750;
+            font-size: 21px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div id="metric" class="metric">
-            
-            <div class="select-mode">
-                <button class="metric active">Metric</button>
+      <div id="metric" class="metric">
+        <h2>Enter your details below:</h2>
 
-                <button class="otherr">Other</button>
+        <div class="select-mode">
+          <button class="metric active">Metric</button>
 
+          <button class="otherr">Other</button>
+        </div>
+        <form id="metric-form">
+          <br />
+          <label>Height (cm)</label> <br />
+          <input type="number" class="height"  step="0.01" min="50" /> <br />
+          <br />
+
+          <label>Weight (kg)</label> <br />
+          <input type="number" class="weight"  step="0.01" min="0" /> <br />
+          <br />
+
+          <label>Gender</label>
+          <div class="radios">
+
+            <div class="radio">
+                <input type="radio" value="male" id="male" name="gender" />
+                <label for="male"">Male</label> <br />
             </div>
 
-            <h2>Enter your asked details below:</h2>
-            
-            <form id="metric-form"> <br>
-                <label>Height (m)</label> <br>
-                <input type="number" class="height" step="0.01" min="0"> <br> <br>
-
-                <label>Weight (kg)</label> <br>
-                <input type="number" class="weight" step="0.01" min="0"> <br> <br>
-
-                <label>Gender</label>
-                <div class="radios"> <br>
-
-                <input type="radio" value="male" class="radio" name="gender">
-                <label>Male</label> <br>
-
-                <input type="radio" value="female" class="radio" name="gender">
-                <label>Female</label> <br>
-
-                </div>
-
-                <button class="btn submit-btn" type="submit">
-                    Submit
-                </button>
-
-            </form>
-
-            <div class="output-box" class="hide">
-
+            <div class="radio">
+                <input type="radio" value="female" id="female" name="gender" />
+                <label for="female">Female</label> <br />
             </div>
 
+            <div class="radio">
+                <input type="radio" value="nottosay" id="nottosay" name="gender" />
+                <label for="nottosay">Rather Not to Say</label>
+            </div>
+          </div>
+
+          <button class="btn submit-btn" type="submit">Submit</button>
+        </form>
+
+        <div class="output-box" class="hide"></div>
+      </div>
+
+      <div class="other hide" id="other-unitss">
+        
+
+        <h2>Enter your details below!</h2>
+
+        <div class="select-mode">
+          <button class="metric">Metric</button>
+          <button class="otherr active">Other</button>
         </div>
 
-        <div class="other hide" id="other-unitss">
+        <form id="other-form">
+          <br />
 
-            <div class="select-mode">
-                <button class="metric">Metric</button>
-                <button class="otherr active">Other</button>
-            </div>
+          <label>Height (in)</label> <br />
+          <input type="number" class="heightt" step="0.01" min="20" /> <br />
+          <br />
 
-            <h2>Enter your requested details!</h2>
+          <label>Weight (lbs)</label> <br />
+          <input type="number" class="weightt" min="0" step="4.7" /> <br />
+          <br />
 
-            <form id="other-form"> <br>
-                
-                <label>Height (in)</label> <br>
-                <input type="number" class="heightt" step="0.01" min="0"> <br> <br>
+          <label>Gender</label>
 
-                <label>Weight (lbs)</label> <br>
-                <input type="number" class="weightt" min="0" step="0.01"> <br> <br>
+          <div class="radios">
+           <div class="radio">
 
-                <label>Gender</label>
+               <input type="radio" value="male" name="genderr" />
+               <label>Male</label> <br />
+           </div> 
 
-                <div class="radios">
-                    <br>
+           <div class="radio">
 
-                    <input type="radio" value="male" class="radio" name="genderr">
-                    <label>Male</label> <br>
+               <input type="radio" value="female" name="genderr" />
+               <label>Female</label> <br />
+           </div>
 
-                    <input type="radio" value="female" class="radio" name="genderr">
-                    <label>Female</label> <br>
+           <div class="radio">
+               <input type="radio" value="nottosay" name="genderr" />
+               <label>Rather Not to Say</label> <br />
+           </div>
+          </div>
 
-                    <input type="radio" value="nottosay" class="radio" name="genderr">
-                    <label>Rather Not to Say</label> <br>
+          <button class="btn submit-btn">Submit</button>
+        </form>
 
-                </div>
-
-                    <button class="btn submit-btn">
-                        Submit
-                    </button>
-
-            </form>
-
-            <div class="output-boxx" class="hide">
-
-            </div>
-
-        </div>
+        <div class="output-boxx" class="hide"></div>
+      </div>
     </div>
-    
+
     <script src="bmi.js"></script>
-</body>
+  </body>
 </html>
