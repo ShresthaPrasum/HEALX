@@ -8,7 +8,7 @@ form.addEventListener('submit', (e)=>{
     console.log(gender);
 
     const bmi = weight / (height * height);
-    let finalbmi = bmi.toFixed(1);
+    let finalbmi = bmi.toFixed(2);
     const output = document.querySelector('.output-box');
     output.classList.remove('hide');
     output.style.display = "flex";
@@ -56,7 +56,7 @@ formm.addEventListener('submit', (e)=>{
     const outputt = document.querySelector('.output-boxx');
 
     let bmii = (703 *weightt)/ (heightt * heightt);
-    bmii = bmii.toFixed(1);
+    bmii = bmii.toFixed(2);
     console.log(bmii);
     outputt.classList.remove('hide');
     outputt.style.display = "flex";
