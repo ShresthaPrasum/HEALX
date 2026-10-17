@@ -16,6 +16,7 @@
             --bg-color: rgb(234, 241, 234);
             --bg1-color: rgb(225, 244, 226);
             --grey-text: rgba(9, 9, 9, 0.552);
+            --border: 1px solid rgba(128, 128, 128, 0.414);
         }
         *{
             padding: 0;
@@ -47,7 +48,7 @@
             align-items: center;
             width: 85%;
             height: 100%;
-            border-bottom: 1px solid rgba(128, 128, 128, 0.414);
+            border-bottom: var(--border);
         }
 
         .logo{
@@ -81,7 +82,7 @@
             text-decoration: none;
             color: rgb(47, 47, 47);
             font-weight: 500;
-            font-size: 14px;
+            font-size: clamp(6px, 12px, 14px);
         }
 
         .hero{
@@ -144,18 +145,19 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            padding: 15px 20px;
+            padding: 1vw 1.2vw;
             border-radius: 5px;
             background-color: rgb(0, 80, 0);
             color: white;
             font-weight: bold;
+            font-size: 1vw;
         }
 
         .calculators{
-            height: 100vh;
+            min-height: 100vh;
             margin-top: 50px;
             background-color: var(--bg1-color);
-            border-top: 1px solid rgba(128, 128, 128, 0.414);
+            border-top: var(--border);
         }
 
         .layout-header{
@@ -175,6 +177,7 @@
 
         .layout-description p {
             color: var(--grey-text);
+            text-align: center;
         }
 
         .layout-main{
@@ -201,7 +204,7 @@
             border-radius: 12px;
             min-height: 150px;
             gap: 10px;
-            border: 1px solid rgba(0, 0, 0);
+            /* border: 1px solid rgba(0, 0, 0); */
             background-color: rgba(197, 226, 198, 0.8);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
@@ -218,6 +221,57 @@
         .calc-card:hover{
             transform: scale(1.1);
             
+        }
+
+        .howitworks{
+            /* height: 100vh;
+            margin-top: 50px;
+            background-color: var(--bg1-color);
+            border-top: 1px solid rgba(128, 128, 128, 0.414); */
+            min-height: 100vh;
+            border-top: var(--border);
+        }
+
+        .calc1-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 50px;
+            width: 90%;
+        }
+
+        .calc1-card{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            overflow: hidden;
+            border-radius: 12px;
+            min-height: 230px;
+            gap: 16px;
+            background-color: rgba(197, 226, 198, 0.8);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .calc1-card h3{
+            font-size: 2vw;
+        }
+        
+
+        .calc1-card:hover{
+            transform: scale(1.1);
+            
+        }
+
+        .calc1-options{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .calc1-options span{
+            background-color: rgb(86, 136, 86);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 12px;
         }
 
     </style>
@@ -305,6 +359,59 @@
                 </div>
             </div>
         </div>
+
+        <div class="howitworks">
+            <div class="layout-header">
+                <div class="layout-head">
+                    <h1>How it works</h1>
+                </div>
+
+                <div class="layout-description">
+                    <p>Learn how to use our health calculators and get your health results then solve accordingly!</p>
+                </div>
+            </div>
+
+            <div class="layout-main">
+                <div class="calc1-grid">
+                    <div class="calc1-card">
+                        <h3>Choose a calculator</h3>
+                        <p>Choose the appropriate health calculator based on your personal needs.</p>
+                        <div class="calc1-options">
+                            <span>BMI</span>
+                            <span>Daily Protein</span>
+                            <span>Daily Calorie</span>
+                            <span>Body Shape</span>
+                        </div>
+                    </div>
+                    <div class="calc1-card">
+                        <h3>Enter your details</h3>
+                        <p>Enter the necessary details about you in the form and submit it.</p>
+
+                        <div class="calc1-options">
+                            <span>Height</span>
+                            <span>Weight</span>
+                            <span>Age</span>
+                            <span>Gender</span>
+                        </div>
+                    </div>
+                    <div class="calc1-card">
+                        <h3>View your results</h3>
+                        <p>View your health results and take the necessary decisions to solve your health issues.</p>
+
+                        <div class="calc1-options">
+                            <span>Underweight</span>
+                            <span>Overweight</span>
+                            <span>Idealweight</span>
+                            <span>2000cal</span>
+                        </div>
+                    </div>
+                    <div class="calc1-card">
+                        <h3>Take Action</h3>
+                        <p>View your health issues and get health tips from us or consult a healthcare professional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="about">
             
@@ -312,4 +419,3 @@
         
     </main>
 </body>
-</html>
