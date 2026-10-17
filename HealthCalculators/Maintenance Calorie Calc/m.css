@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#maintain{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 65vh;
+    background-color: rgb(25, 25, 25);
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+h2{
+    font-size: 45px;
+    font-weight: 750;
+    text-align: center;
+}
+h1{
+    font-size: 56px;
+    font-weight: 800;
+    text-align: center;
+}
+input[type="number"], input[type="text"]{
+    margin-top: 5px;
+}
+label{
+    font-weight: 650;
+}
+.radios label{
+    gap: 5px;
+    font-weight: normal;
+}
+.submit-btn{
+    width: 110px;
+    margin-top: 10px;
+    height: 35px;
+    border-radius: 15px;
+}
+#output-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: gray;
+    text-align: center;
+    border: 1px solid rgb(25, 25, 25);
+    border-radius: 15px;
+    margin-top: 5%;
+}
+#output-box p{
+    font-weight: 650;
+    font-size: 20px;
+}
+.hide{
+    display: none;
+}
