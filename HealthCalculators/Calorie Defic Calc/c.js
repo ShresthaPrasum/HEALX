@@ -3,21 +3,33 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const height = document.querySelector('.height').value;
     const age = document.querySelector('.age').value;
-    const weight = document.querySelector('.weight').value;
-    const weightinlbs = weight * 2.205;
-    const target_weight = document.querySelector('.target-weight').value;
-    const target_weightinlbs = target_weight* 2.205;
-    const weighttolose = target_weightinlbs - weightinlbs;
-    const calores = weighttolose * 
-    const datee = document.querySelector('.date').value;
-    const days = (new Date(datee) - new Date()) /  (1000 * 60 * 60 * 24);
-    console.log(days);
+    const date = document.querySelector('.date').value;
+
+    const target_date = new Date(date);
+    target_date.setHours(0, 0, 0, 0);
+    const current_date = new Date();
+    current_date.setHours(0, 0, 0, 0);
+    const remaining_days = Math.ceil((target_date - current_date) / (1000 * 60 * 60 * 24));
+
+    const formm = new FormData(form);
+    const gender = formm.get('gender');
+
+    const weight = parseFloat(document.querySelector('.weight'));
+    const target_weight = parseFloat(document.querySelector('.target-weight'));
+    const weighttolose = weight - target_weight;
+    const calories = weighttolose * 3500;
+    const caloriedeficit = remaining_days > 0 ? (calories / remaining_days) : 0;
+
+    document.querySelector('#output-box').innerHTML = `
+    <p class="value-display">
+         <span class="number">${Math.round(caloriedeficit)}</span>
+         <span class="unit">kcal/day</span>
+    </p>
+    `;
 
 
-    // let bmr;
+
      
-    // const formm = new FormData(form);
-    // const gender = formm.get('gender');
 
     // if(gender.toLowerCase()==="male"){
     //     bmr = (10 * weight) + (6.25 * height) - (5*age) + 5;
@@ -27,6 +39,9 @@ form.addEventListener('submit', (e) => {
     //     alert("BRUHHH");
     //     console.log(gender);
     // }
+
+    // const calories = weighttolose * 3500;
+    // const target_weightinlbs = target_weight* 2.205;
 
     // const tdee = bmr * pal;
     // const energy_balance = energy_intake - tdee;
