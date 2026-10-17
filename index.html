@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEALX - Make your life healthier than ever</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pixelify+Sans:wght@400..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     
 
     <style>
+
+        :root{
+            --bg-color: rgb(234, 241, 234);
+            --bg1-color: rgb(225, 244, 226);
+            --grey-text: rgba(9, 9, 9, 0.552);
+        }
         *{
             padding: 0;
             margin: 0;
@@ -17,8 +24,8 @@
         }
 
         body{
-            background-color: rgb(234, 241, 234);
-            font-family: 'DM Sans', Arial, sans-serif;
+            background-color: var(--bg-color);
+            font-family: "Unbounded", sans-serif; 
             color: black;
 
         }
@@ -92,7 +99,7 @@
         }
 
         .hero-first h1{
-            font-size: 4.5vw;
+            font-size: 3.5vw;
             line-height: 1.2;
             font-weight:700;
             margin-bottom: 20px;
@@ -102,7 +109,7 @@
 
         .hero-first p{
             /* margin-bottom: 0px; */
-            color: rgba(9, 9, 9, 0.552);
+            color: var(--grey-text);
         }
 
         .hero-visual{
@@ -143,6 +150,7 @@
         .calculators{
             height: 100vh;
             margin-top: 50px;
+            background-color: var(--bg1-color);
             border-top: 1px solid rgba(128, 128, 128, 0.414);
         }
 
@@ -162,7 +170,7 @@
         }
 
         .layout-description p {
-            color: rgba(9, 9, 9, 0.663);
+            color: var(--grey-text);
         }
 
         .layout-main{
@@ -187,14 +195,18 @@
             padding: 20px;
             overflow: hidden;
             border-radius: 12px;
-            min-height: 170px;
+            min-height: 150px;
             gap: 10px;
             border: 1px solid rgba(0, 0, 0);
             background-color: rgba(197, 226, 198, 0.8);
         }
 
         .calc-card h3{
-            font-size: 2.4vw;
+            font-size: 2vw;
+        }
+
+        .calc-card p{
+            color: rgb(98, 98, 98);
         }
 
     </style>
@@ -251,15 +263,15 @@
                         <p>Calculate your Body Mass Index to assess your weight status.</p>
                     </div>
                     <div class="calc-card">
-                        <h3>Blood Sugar Converter</h3>
+                        <h3>Calorie Deficit Calculator</h3>
                         <p>Calculate your Body Mass Index to assess your weight status.</p>
                     </div>
                     <div class="calc-card">
-                        <h3>Chlorestol ratios calculator</h3>
+                        <h3>Protein Calculator</h3>
                         <p>Calculate your Body Mass Index to assess your weight status.</p>
                     </div>
                     <div class="calc-card">
-                        <h3>Chlorestol  units calc</h3>
+                        <h3>Daily Calorie Calculator</h3>
                         <p>Calculate your Body Mass Index to assess your weight status.</p>
                     </div>
                     <div class="calc-card">
