@@ -6,17 +6,21 @@
 body{
     background-color: black;
     color: white;
+}
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
-#metric{
-    margin-top: 30vh;
-    width: 50vw;
-    height: 50vh;
+#metric, .other{
+    /* margin-top: 30vh; */
+    width: 55vw;
+    height: 63vh;
     background-color: rgb(42, 41, 41);
     padding: 50px;
     border-radius: 10px;
+    flex-direction: column;
 }
 
 h2{
@@ -35,16 +39,13 @@ label{
     font-weight: normal;
 }
 
-.hide{
-    display: none;
-}
 .submit-btn{
     margin-top: 10px;
     width: 110px;
     height: 35px;
     border-radius: 15px;
 }
-#select-mode{
+.select-mode{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,4 +61,20 @@ label{
 }
 .active{
     border: 1px solid black;
+}
+.output-box, .output-boxx{
+    flex-direction: column;
+    gap: 10px;
+    background-color: gray;
+    text-align: center;
+    margin-top: 5%;
+    border: none;
+    border-radius: 10px;
+}
+#output-box p, .output-boxx p{
+    font-weight: 750;
+    font-size: 21px;
+}
+.hide{
+    display: none;
 }
