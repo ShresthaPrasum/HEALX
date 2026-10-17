@@ -20,6 +20,7 @@ body{
     background-color: rgb(42, 41, 41);
     padding: 50px;
     border-radius: 10px;
+    flex-direction: column;
 }
 
 h2{
@@ -74,10 +75,6 @@ label{
     font-weight: 750;
     font-size: 21px;
 }
-
 .hide{
-    display: none;
-}
-#metric{
     display: none;
 }

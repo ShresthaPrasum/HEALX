@@ -8,7 +8,7 @@ form.addEventListener('submit', (e)=>{
     console.log(gender);
 
     const bmi = weight / (height * height);
-    let finalbmi = bmi;
+    let finalbmi = bmi.toFixed(1);
     const output = document.querySelector('.output-box');
     output.classList.remove('hide');
     output.style.display = "flex";
@@ -55,7 +55,8 @@ formm.addEventListener('submit', (e)=>{
     let genderr = formdataa.get('genderr');
     const outputt = document.querySelector('.output-boxx');
 
-    const bmii = (703 *weightt)/ (heightt * heightt);
+    let bmii = (703 *weightt)/ (heightt * heightt);
+    bmii = bmii.toFixed(1);
     console.log(bmii);
     outputt.classList.remove('hide');
     outputt.style.display = "flex";
@@ -68,7 +69,7 @@ formm.addEventListener('submit', (e)=>{
         outputt.innerHTML = `
             <h2> Underweight </h2>
             <p> Your BMI is ${bmii} </p>
-            <p> Try to eat more healthy stuffs and become healthy ${genderr}!</p>
+            <p> Try to eat more healthy stuffs and become a healthy ${genderr}!</p>
         `;
     }else if(bmii < 25 && bmii >=18.5){
         outputt.innerHTML = `
@@ -76,7 +77,7 @@ formm.addEventListener('submit', (e)=>{
             <p> Your BMI is ${bmii} </p> 
             <p> One of the most perfect ${genderr} in the planet! </p>
         `;
-    }else if(bmii< 30 && finalbmi >= 25){
+    }else if(bmii< 30 && bmii >= 25){
         outputt.innerHTML = `
             <h2> Obese </h2>
             <p> Your BMI is ${bmii} </p>
@@ -91,4 +92,46 @@ formm.addEventListener('submit', (e)=>{
     }else {
         alert("Please write your details properly again!");
     }
+})
+const metricbtns = document.querySelectorAll('.select-mode .metric');
+const otherbtns = document.querySelectorAll('.select-mode .otherr');
+const metric = document.querySelector('#metric');
+const other = document.querySelector('#other-unitss');
+
+metricbtns.forEach((metricbtn)=>{
+    metricbtn.addEventListener('click', ()=>{
+        metricbtns.forEach((a)=>{
+            a.classList.add('active');
+            })
+            
+            otherbtns.forEach((other)=>{
+                other.classList.remove('active');
+            })
+
+            metric.classList.remove('hide');
+            metric.style.display = "flex";
+
+
+            other.classList.add('hide');
+            other.style.display = "none";
+        
+    })
+})
+
+otherbtns.forEach((otherbtn)=>{
+    otherbtn.addEventListener('click', ()=>{
+        otherbtns.forEach((b)=>{
+            b.classList.add('active');
+        })
+
+        metricbtns.forEach((c)=>{
+            c.classList.remove("active");
+        })
+
+        other.classList.remove('hide');
+        other.style.display = "flex";
+
+        metric.classList.add('hide');
+        metric.style.display = "none";
+    })
 })
