@@ -54,6 +54,7 @@ label{
     display: flex;
     margin-top: 5%;
     flex-direction: column;
+    text-align: center;
     background-color: green;
     border: 1px solid  rgb(41, 41, 41);
     border-radius: 10px;
