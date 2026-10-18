@@ -21,23 +21,37 @@
     padding: 50px;
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 50%;
     height: 65vh;
     border: none;
     border-radius: 15px;
 }
 h1{
-    font-size: 64px;
+    font-size: 3rem;
+    margin-bottom: 20px;
     font-weight: 900;
     text-align: center;
 }
 h2{
     text-align: center;
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 777;
 }
-input[type="number"]{
-    margin-top: 5px;
+input[type= text],input[type= number], select{
+    text-indent: 10px;
+    color: rgb(33,36,39);
+    min-height: 36px;
+    opacity: 1;
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+
 }
 label{
     font-weight: 667;
