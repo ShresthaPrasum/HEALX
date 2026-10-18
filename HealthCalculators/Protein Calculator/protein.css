@@ -41,7 +41,7 @@ h2{
 input[type= text],input[type= number], select{
     text-indent: 10px;
     color: rgb(33,36,39);
-    min-height: 36px;
+    min-height: 32px;
     opacity: 1;
     text-align: left;
     width: 100%;

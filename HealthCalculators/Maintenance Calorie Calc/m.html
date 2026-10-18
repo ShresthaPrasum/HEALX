@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maintenance Calorie Calculator</title>
     <link rel="stylesheet" href="m.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pixelify+Sans:wght@400..700&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
 
     <div id="container">
 
-        <h1>Maintain your weight!</h1>
+        <h1>Maintenance Calorie Calculator</h1>
 
         <div id="maintain">
 
@@ -52,7 +57,7 @@
 
                 <div class="radios">
 
-                    <input type="radio" name="lvl" value="no">
+                    <!-- <input type="radio" name="lvl" value="no">
                     <label>I do not exercise</label> <br>
 
                     <input type="radio" name="lvl" value="regularly">
@@ -62,7 +67,14 @@
                     <label>I have a physical job!</label> <br>
 
                     <input type="radio" name="lvl" value="professional">
-                    <label>I am a professional athlete.</label> <br>
+                    <label>I am a professional athlete.</label> <br> -->
+
+                    <select name="lvl" id="lvl">
+                        <option value="no">No Exercise</option>
+                        <option value="regularly">Regular Exercise</option>
+                        <option value="job">Physical Job</option>
+                        <option value="professional">Professional Athlete</option>
+                    </select>
 
                 </div>
 
@@ -72,7 +84,7 @@
 
             </form>
 
-            <div id="output-box" class="hide">
+            <div class="output-box hide">
                 <p>
 
                 </p>

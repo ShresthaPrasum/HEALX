@@ -8,7 +8,7 @@ form.addEventListener('submit', (e)=>{
     const age = parseInt(document.querySelector('.age').value);
     const formm = new FormData(form);
     const gender = formm.get('gender');
-    const pal = formm.get('lvl');
+    const pal = document.querySelector('#lvl').value;
 
     let bmr;
     if(gender.toLowerCase()==="male"){
@@ -16,7 +16,7 @@ form.addEventListener('submit', (e)=>{
     }else if(gender.toLowerCase()==="female"){
         bmr = (10*weight) + (6.25*height) - (5*age) -161;
     }else{
-        alert("BRUHHH");
+        alert("Please don't do this to me gng...");
         console.log(name);
         console.log(height);
         console.log(weight);
@@ -43,9 +43,10 @@ form.addEventListener('submit', (e)=>{
     const mantainance = bmr * palmulti;
     console.log(mantainance);
 
-    const output = document.querySelector('#output-box');
+    const output = document.querySelector('.output-box');
+    output.classList.remove('hide');
     output.innerHTML = `
-    <h2> Maintain Your Weight!! </h2>
+    <h3> Maintain Your Weight!! </h3>
     <p>
         ${name}, You can maintain your weight by consuming ${mantainance} calories per day!!
     </p>
