@@ -1,4 +1,5 @@
 const form = document.querySelector('#form');
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const name = document.querySelector('#name').value;
@@ -8,7 +9,7 @@ form.addEventListener('submit', (e)=>{
 
     const formdata = new FormData(form);
     const gender = formdata.get('gender');
-    const activity = formdata.get('activity');
+    const activity = document.querySelector('#activity').value;
     let bmr;
 
     if(gender.toLowerCase()==="male"){
@@ -40,7 +41,7 @@ form.addEventListener('submit', (e)=>{
     let totalcalories = bmr * multi;
     console.log(totalcalories);
 
-    const output = document.querySelector('#output-box');
+    const output = document.querySelector('.output-box');
     output.classList.remove('hide');
 
     output.innerHTML = `
