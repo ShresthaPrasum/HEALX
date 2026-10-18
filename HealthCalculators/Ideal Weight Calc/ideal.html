@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="ideal.css">
 </head>
 <body>
+
+    <div id="container">
+        <h1>Ideal Weight Calculator</h1>
+
+        <div id="ideal">
+            <h2>Calculate how much weight you should have had by entering the asked details!</h2>
+
+                <form id="form">
+
+                    <label>Name</label> <br>
+                    <input type="text" class="name"> <br> <br>
+
+                    <label>Weight (kg)</label><br>
+                    <input type="number" class="weight" min="0" step="0.1"> <br> <br>
+
+                    <label>Gender</label>
+                    <div class="radios">
+                        <input type="radio" name="gender" class="male" value="male">
+                        <label>Male</label> <br>
+
+                        <input type="radio" name="gender" class="female" value="female">
+                        <label>Female</label> <br>
+
+                    </div>
+
+                    <label>Height (m)</label> <br>
+                    <input type="number" class="height" id="height" step="0.01" min="0"> <br> <br>
+
+                    <button class="btn submit-btn">
+                        Submit!
+                    </button>
+
+                </form> <br>
+
+                <div id="output-box">
+                    <p>
+
+                    </p>
+                </div>
+
+        </div>
+    </div>
     
     <script src="ideal.js"></script>
 </body>
