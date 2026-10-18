@@ -21,19 +21,30 @@
             font-family: "Unbounded", sans-serif; 
             /* color: b; */
         }
+        a{
+            position: absolute;
+            font-size: 10px;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: inherit;
+        }
         .container{
+            
             display: flex;
             align-items: center;
+            flex-direction: column;
             justify-content: center;
             min-height: 100vh;
         }
         #metric, .other{
+            position: relative;
             display: flex;
             /* align-items: center; */
             justify-content: center;
             min-width: 50%;
             min-height: 70vh;
-            background-color: #d0a548;
+            background-color: #ffd47d;
             padding: 50px;
             border-radius: 10px;
             flex-direction: column;
@@ -106,26 +117,37 @@
         }
 
         .output-box, .output-boxx{
+            display: none;
             flex-direction: column;
             gap: 10px;
-            background-color: gray;
+            background-color: yellow;
             text-align: center;
-            margin-top: 5%;
+            padding: 20px;
             border: none;
             border-radius: 10px;
+            margin-top: 20px;
         }
-        #output-box p, .output-boxx p{
+        .output-box p, .output-boxx p{
             font-weight: 750;
             font-size: 21px;
         }
         .hide{
             display: none;
         }
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
     </style>
   </head>
   <body>
     <div class="container">
+        <h1>Calorie Defict Calculator</h1>
+
       <div id="metric" class="metric">
+        <a href="/index.html"><-Home</a>
         <h2>Enter your details below:</h2>
 
         <div class="select-mode">
@@ -156,24 +178,24 @@
                 <label for="female">Female</label> <br />
             </div>
 
-            <div class="radio">
-                <input type="radio" value="nottosay" id="nottosay" name="gender" />
-                <label for="nottosay">Rather Not to Say</label>
-            </div>
+    
           </div>
 
           <button class="btn submit-btn" type="submit">Submit</button>
         </form>
 
-        <div class="output-box" class="hide"></div>
+        <div class="output-box hide">
+
+        </div>
       </div>
 
       <div class="other hide" id="other-unitss">
         
 
-        <h2>Enter your details below!</h2>
+        <h2>Enter your details below:</h2>
 
         <div class="select-mode">
+            <a href="/index.html"><-Home</a>
           <button class="metric">Metric</button>
           <button class="otherr active">Other</button>
         </div>
@@ -186,7 +208,7 @@
           <br />
 
           <label>Weight (lbs)</label> <br />
-          <input type="number" class="weightt" min="0" step="4.7" /> <br />
+          <input type="number" class="weightt" min="4.7" step="0.01" /> <br />
           <br />
 
           <label>Gender</label>
@@ -204,16 +226,12 @@
                <label>Female</label> <br />
            </div>
 
-           <div class="radio">
-               <input type="radio" value="nottosay" name="genderr" />
-               <label>Rather Not to Say</label> <br />
-           </div>
           </div>
 
           <button class="btn submit-btn">Submit</button>
         </form>
 
-        <div class="output-boxx" class="hide"></div>
+        <div class="output-boxx hide"></div>
       </div>
     </div>
 

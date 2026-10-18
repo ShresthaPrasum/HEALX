@@ -1,4 +1,19 @@
 const form = document.querySelector("#form");
+
+const weightLabel = document.querySelector("#weight-label");
+
+const unitType = document.querySelector("#unit");
+
+unitType.addEventListener("change",()=>{
+  if(unitType.value === "metric"){
+    weightLabel.textContent = "Weight (kg)";
+  }
+  
+  else {
+    weightLabel.textContent = "Weight (lbs)";
+  }
+})
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.querySelector(".name").value;

@@ -4,7 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Defic Calculator</title>
-    <link rel="stylesheet" href="c.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pixelify+Sans:wght@400..700&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #F7F9FF;
+            font-family: "Unbounded", sans-serif; 
+        }
+        a{
+            position: absolute;
+            font-size: 10px;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: inherit;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        #Calculator{
+            position: relative;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            min-width: 50%;
+            min-height: 60vh;
+            background-color: #ffd47d;
+            padding: 40px;
+            border-radius: 10px;
+            flex-direction: column;
+        }
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        h2{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 750;
+            margin-bottom: 20px;
+        }
+
+        
+
+        input, select{
+            text-indent: 10px;
+            color: rgb(33, 36, 39);
+            min-height: 36px;
+            opacity: 1;
+            text-align: left;
+            width: 90%;
+            font-size: 1rem;
+            line-height: 30px;
+            font-weight: 500;
+            border-radius: 6px;
+            border-width: 1px;
+            border-style: solid;
+            outline: none;
+            transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 10px;
+        }
+        label{
+            font-weight: 650;
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            transition: transform 1s ease-in-out;
+        }
+    
+        .submit-btn{
+            width: 110px;
+            height: 35px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        .output-box{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: gray;
+            text-align: center;
+            border: 1px solid rgb(26, 25, 25);
+            border-radius: 15px;
+            margin-top: 7%;
+        }
+        #output-box p{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .hide{
+            display: none;
+        }
+
+        
+    </style>
 </head>
 <body>
 
@@ -13,21 +128,29 @@
         <h1>Calorie Defict Calculator</h1>
 
         <div id="Calculator">
-            <h2>Enter the asked details listed below:</h2>
+            <a href="/index.html"><-Home</a>
+            <h2>Enter your details below:</h2>
 
             <form id="form">
 
-                <label>Name </label> <br>
-                <input type="text" class="name"> <br><br>
+                <label for="unit">Unit System</label> <br/>
+                <select name="unit" id="unit">
+                    <option value="metric">Metric (kg)</option>
+                    <option value="other">Other (lbs)</option>
+                </select>
+                <br>
 
-                <label>Weight (lbs)</label> <br>
-                <input type="number" class="weight" step="0.1" min="0"> <br> <br>
+                <label>Name </label> <br>
+                <input type="text" class="name"> <br>
+
+                <label id="weight-label">Weight (lbs)</label> <br>
+                <input type="number" class="weight" step="0.1" min="0"> <br>
 
                 <label>Target Weight</label> <br>
-                <input type="number" class="target-weight" step="1" min="0"> <br> <br>
+                <input type="number" class="target-weight" step="1" min="0"> <br>
 
                 <label>Target Date</label> <br>
-                <input type="date" class="date"> <br> <br>
+                <input type="date" class="date"> <br>
 
                 <!-- <label>Gender</label>
 
@@ -47,7 +170,7 @@
 
             </form>
 
-            <div id="output-box" class="hide">
+            <div class="output-box hide">
                 <p></p>
             </div>
 
