@@ -16,6 +16,7 @@ body{
     flex-direction: column;
 }
 #ideal{
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -66,4 +67,12 @@ label{
 
 .hide {
     display: none;
+}
+a{
+    position: absolute;
+    font-size: 14px;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: inherit;
 }
