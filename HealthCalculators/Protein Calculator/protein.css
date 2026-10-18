@@ -4,9 +4,9 @@
 }
 
 body{
-        background-color: #dee6ff;
-        font-family: "Unbounded", sans-serif; 
-    }
+    background-color: #dee6ff;
+    font-family: "Unbounded", sans-serif; 
+}
     
 #container{
     display: flex;
@@ -17,7 +17,7 @@ body{
 }
 
 #protein{
-    background-color: rgb(185, 130, 76);
+    background-color: rgb(187, 53, 53);
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -27,21 +27,24 @@ body{
     border-radius: 15px;
     position: relative;
 }
+
 h1{
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 900;
     text-align: center;
 }
+
 h2{
     text-align: center;
     font-size: 2rem;
     font-weight: 777;
 }
+
 input[type= text],input[type= number], select{
     text-indent: 10px;
     color: rgb(33,36,39);
-    min-height: 32px;
+    min-height: 40px;
     opacity: 1;
     text-align: left;
     width: 100%;
@@ -59,8 +62,12 @@ label{
 }
 
 .radios{
-    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
 }
+
 .radios label{
     font-weight: normal;
 }
@@ -69,6 +76,7 @@ label{
     font-size: 16px;
     transform: scale(1.4);
 }
+
 .submit-btn{
     border: none;
     width: 110px;
@@ -78,22 +86,27 @@ label{
     border-radius: 10px;
     margin-top: 12px;
 }
+
 .output-box{
     display: flex;
     margin-top: 5%;
     flex-direction: column;
     text-align: center;
-    background-color: green;
+    background-color: rgb(197, 88, 21);
     border: 1px solid  rgb(41, 41, 41);
     border-radius: 10px;
+    padding: 20px;
 }
+
 .output-box p{
     font-weight: 700;
     font-size: 20px;
 }
+
 .hide {
     display: none;
 }
+
 a{
     position: absolute;
     font-size: 14px;

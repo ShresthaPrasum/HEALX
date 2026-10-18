@@ -28,26 +28,26 @@
             <form id="form">
 
                 <label>Name</label> <br>
-                <input type="text" id="name"> <br> <br>
+                <input type="text" id="name" required> <br> <br>
 
                 <label>Height (cm)</label> <br>
-                <input type="number" class="height" step="0.1"> <br> <br>
+                <input type="number" class="height" step="0.1"  required> <br> <br>
 
                 <label>Weight (kg)</label> <br>
-                <input type="number" class="weight" step="0.1"> <br> <br>
+                <input type="number" class="weight" step="0.1" required> <br> <br>
 
                 <label for="age">Age (years)</label> <br>
-                <input type="number" class="age"> <br> <br>
+                <input type="number" class="age"  required> <br> <br>
 
                 <label>Gender</label> <br>
 
                 <div class="radios">
 
-                    <input type="radio" name="gender" value="male" class="male">
-                    <label>Male</label> <br>
+                    <input type="radio" name="gender" value="male" class="male" id="male" required>
+                    <label for="male">Male</label> <br>
 
-                    <input type="radio" name="gender" value="female" class="female">
-                    <label>Female</label> <br> <br>
+                    <input type="radio" name="gender" value="female" class="female" id="female" required> 
+                    <label for="female">Female</label> <br> <br>
 
                 </div>
 
@@ -69,7 +69,7 @@
                     <input type="radio" name="lvl" value="professional">
                     <label>I am a professional athlete.</label> <br> -->
 
-                    <select name="lvl" id="lvl">
+                    <select name="lvl" id="lvl" required>
                         <option value="no">No Exercise</option>
                         <option value="regularly">Regular Exercise</option>
                         <option value="job">Physical Job</option>

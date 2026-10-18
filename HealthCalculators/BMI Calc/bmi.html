@@ -1,4 +1,4 @@
-<!doctype html>
+required<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,7 +44,7 @@
             justify-content: center;
             min-width: 50%;
             min-height: 70vh;
-            background-color: #ffd47d;
+            background-color: #ffc34a;
             padding: 50px;
             border-radius: 10px;
             flex-direction: column;
@@ -161,23 +161,23 @@
         <form id="metric-form">
           <br />
           <label>Height (cm)</label> <br />
-          <input type="number" class="height"  step="0.01" min="50" /> <br />
+          <input type="number" class="height"  step="0.01" min="50" required/> <br />
           <br />
 
           <label>Weight (kg)</label> <br />
-          <input type="number" class="weight"  step="0.01" min="0" /> <br />
+          <input type="number" class="weight"  step="0.01" min="0" required/> <br />
           <br />
 
           <label>Gender</label>
           <div class="radios">
 
             <div class="radio">
-                <input type="radio" value="male" id="male" name="gender" />
+                <input type="radio" value="male" id="male" name="gender" required/>
                 <label for="male"">Male</label> <br />
             </div>
 
             <div class="radio">
-                <input type="radio" value="female" id="female" name="gender" />
+                <input type="radio" value="female" id="female" name="gender" required/>
                 <label for="female">Female</label> <br />
             </div>
 

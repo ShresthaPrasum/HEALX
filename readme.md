@@ -40,6 +40,6 @@ Healx is a health units calculating web application that offers a variety of hea
 <hr>
 
 ## Live Demo
-You can try this out by clicking [here](https://).
+You can try this out by clicking [here](https://healx.netlify.app).
 
 <hr>

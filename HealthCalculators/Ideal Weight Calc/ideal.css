@@ -4,8 +4,8 @@
     padding: 0;
 }
 body{
-    background-color: black;
-    color: #fff;
+    background-color: #dee6ff;
+    font-family: "Unbounded", sans-serif; 
 }
 #container{
     display: flex;
@@ -16,53 +16,83 @@ body{
     flex-direction: column;
 }
 #ideal{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 60vw;
-    height: 65vh;
-    background-color: rgb(71, 70, 70);
+    width: 50%;
+    min-height: 65vh;
+    background-color: rgb(245, 159, 0);
     padding: 50px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 8px;
 }
 h1{
-    font-size: 64px;
+    font-size: 3rem;
     text-align: center;
 }
 h2{
-    font-size: 48px;
+    font-size: 2rem;
     text-align: center;
 }
 input[type="text"], input[type="number"]{
-    margin-top: 5px;
+    width: 90%;
+    min-height: 40px;
+    opacity: 1;
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    text-indent: 10px;
+    color: rgb(33,36,39);
+    
 }
 label{
     font-weight: 650;
 }
+.radios {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+}
 .radios label{
-    gap: 5px;
     font-weight: normal;
+}
+.male, .female{
+    font-size: 16px;
+    transform: scale(1.4);
 }
 .submit-btn{
     width: 110px;
-    height: 32px;
+    height: 35px;
     border: none;
-    border-radius: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 10px;
 }
-#output-box p{
+.hide{
+    display: none;
+}
+.output-box p{
     font-weight: 650;
     font-size: 20px;
 }
-#output-box{
+.output-box{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: gray;
+    background-color: rgb(255, 174, 0);
     border: none;
+    padding: 20px;
     border-radius: 15px;
     margin-top: 5%;
     text-align: center;
+    outline: none;
 }
 
 .hide {
