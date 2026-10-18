@@ -16,6 +16,7 @@ body{
     justify-content: center;
 }
 #maintain{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 65vw;
@@ -67,4 +68,12 @@ label{
 }
 .hide{
     display: none;
+}
+a{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    top: 20px;
+    left: 20px;
 }

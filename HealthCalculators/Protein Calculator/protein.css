@@ -25,6 +25,7 @@
     height: 65vh;
     border: none;
     border-radius: 15px;
+    position: absolute;
 }
 h1{
     font-size: 3rem;
@@ -81,4 +82,12 @@ label{
 }
 .hide {
     display: none;
+}
+a{
+    position: absolute;
+    font-size: 14px;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color:inherit;
 }
